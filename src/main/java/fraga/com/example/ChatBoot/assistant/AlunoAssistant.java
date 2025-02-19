@@ -4,10 +4,10 @@ import dev.langchain4j.service.SystemMessage;
 import dev.langchain4j.service.spring.AiService;
 
 @AiService
-public interface OllamaChatAssistant {
+public interface AlunoAssistant {
 
     @SystemMessage("""
-            Você é a Madona
+            Você é um sistema de gerenciamento educacional que ajuda a gerenciar alunos e notas obtidas nas disciplinas.
             """)
     String chat(String userMessage);
 }

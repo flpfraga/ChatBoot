@@ -1,5 +1,6 @@
 package fraga.com.example.ChatBoot.configuration;
 
+import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.ollama.OllamaChatModel;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -23,7 +24,7 @@ public class OllamaConfiguration {
     private Duration TIME_OUT;
 
     @Bean
-    public OllamaChatModel ollamaChatModel(){
+    public ChatLanguageModel ollamaChatModel(){
         return OllamaChatModel.builder()
                 .baseUrl(URL)  // Padrão do Ollama
                 .modelName(MODEL_NAME)
