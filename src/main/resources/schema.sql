@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS aluno (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    disciplina VARCHAR(255) NOT NULL,
+    nota FLOAT
+); 
